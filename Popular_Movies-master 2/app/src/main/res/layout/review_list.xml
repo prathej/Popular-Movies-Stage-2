@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_padding_bottom"
+    android:paddingRight="@dimen/activity_padding_right"
+    android:paddingLeft="@dimen/activity_padding_left">
+
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Author"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Review"
+        android:ellipsize="end"
+        android:textColor="#000000"
+        android:maxLines="5"
+        android:fontFamily="sans-serif-condensed"/>
+</LinearLayout>

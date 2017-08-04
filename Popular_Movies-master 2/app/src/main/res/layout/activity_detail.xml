@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+ <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    >
+
+     <TextView
+         android:id="@+id/textview_original_title"
+         android:layout_width="match_parent"
+         android:layout_height="100dp"
+         android:background="@color/colorPrimaryLight"
+         android:padding="15dp"
+         android:textColor="@android:color/white"
+         android:textSize="20sp"
+         tools:text="Title"
+         android:gravity="fill"
+         android:textStyle="bold"
+         />
+
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/imageview_poster"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:layout_margin="10dp"
+            android:elevation="12dp"
+            android:background="#fff"
+             />
+
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_weight="2"
+             android:orientation="vertical"
+             android:paddingEnd="2dp"
+             android:paddingLeft="5dp"
+             android:paddingRight="2dp"
+             android:paddingStart="5dp">
+
+            <TextView
+                android:id="@+id/textview_release_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/heading_release_date"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                android:textColor="#000000"
+               />
+
+            <TextView
+                android:id="@+id/textview_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="2dp"
+                android:paddingEnd="2dp"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:fontFamily="sans-serif-condensed"
+                tools:text="22/07/2017"
+                />
+
+            <TextView
+                android:id="@+id/textview_vote_average_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/heading_vote_average"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/textview_vote_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="2dp"
+                android:paddingEnd="2dp"
+                android:textSize="@dimen/abc_text_size_large_material"
+                tools:text="8.8/10"/>
+
+
+             <LinearLayout
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="5dp"
+
+                 android:layout_marginTop="15dp"
+                 android:orientation="horizontal">
+
+                 <ImageButton
+                     android:id="@+id/favorite_button"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:background="@android:color/transparent"
+                     android:src="@android:drawable/btn_star_big_off"
+                     android:onClick="onClickAddMovies"/>
+
+                 <TextView
+                     android:id="@+id/textView"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:layout_marginLeft="15dp"
+                     android:text="@string/favourite"
+                     android:textSize="18sp"
+                     android:fontFamily="sans-serif-smallcaps"
+                     android:textStyle="bold"
+                     android:textColor="#000000"/>
+             </LinearLayout>
+
+         </LinearLayout>
+
+    </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview_overview_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overview_header"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"/>
+
+     <TextView
+         android:id="@+id/textview_overview"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:padding="10dp"
+         android:textColor="#000000"
+         android:fontFamily="sans-serif-condensed"
+         tools:text="@string/overviewDescription"/>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:id="@+id/extras">
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_height="5dp"
+             android:background="#e0e0e0"/>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:paddingLeft="10dp"
+             android:paddingTop="10dp"
+             android:paddingRight="10dp"
+             android:text="@string/trailers_header"
+             android:textColor="#000000"
+             android:textSize="20sp"
+             android:fontFamily="sans-serif-condensed"
+             android:textStyle="bold"
+             />
+
+         <android.support.v7.widget.RecyclerView
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/trailersRecyclerView"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="5dp"
+             android:layout_marginLeft="5dp"
+             android:elevation="12dp"
+             android:background="#fff"
+             />
+
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/noTrailerView"
+             android:textSize="20sp"
+             android:text="No trailers available"
+             android:visibility="invisible"
+             android:paddingLeft="15dp" />
+
+         <View
+             android:layout_width="match_parent"
+             android:layout_height="5dp"
+             android:background="#e0e0e0"/>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:paddingLeft="10dp"
+             android:paddingTop="10dp"
+             android:text="@string/reviews_header"
+             android:textColor="#000000"
+             android:textSize="20sp"
+             android:fontFamily="sans-serif-condensed"
+             android:textStyle="bold"/>
+
+         <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/reviewsRecyclerView"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="5dp"
+             android:layout_marginLeft="5dp"
+             />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/noReviewView"
+             android:textSize="20sp"
+             android:paddingLeft="15dp"
+             android:text="No reviews available"
+             android:visibility="invisible" />
+     </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
+
+</layout>
+
+
+
+
+
