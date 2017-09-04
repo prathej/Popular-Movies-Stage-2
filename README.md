@@ -8,7 +8,7 @@ Most of us can relate to kicking back on the couch and enjoying a movie with fri
 This app makes use of the most popular The Movie Db API to get the movies playing and also display the most popular movies based on the user ratings.
 Also this makes use of the most popular libraries such as ButterKnife, Picasso, etc.
 
-# Features
+## Features
 
 With the app, you can:
 
@@ -16,3 +16,8 @@ With the app, you can:
 * Save favorite movies locally to view them even when offline
 * Watch trailers
 * Read reviews
+
+## Screenshots
+
+![screenshot 1](https://user-images.githubusercontent.com/18039638/30025395-fb2eab2e-9195-11e7-9f86-7b273f866fcc.JPG)
+
